@@ -1,3 +1,9 @@
 [submodule "my-avs/lib/forge-std"]
 	path = my-avs/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "my-avs/lib/eigenlayer-middleware"]
+	path = my-avs/lib/eigenlayer-middleware
+	url = https://github.com/Layr-Labs/eigenlayer-middleware
+[submodule "my-avs/lib/solady"]
+	path = my-avs/lib/solady
+	url = https://github.com/Vectorized/solady
