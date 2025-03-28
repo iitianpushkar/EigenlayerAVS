@@ -1,0 +1,17 @@
+{
+  "name": "operatorandtasks",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "ollama": "^0.5.14",
+    "viem": "^2.24.1"
+  }
+}

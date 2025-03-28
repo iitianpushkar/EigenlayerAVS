@@ -2,7 +2,7 @@
 
 pragma solidity ^0.8.26;
 
-import {Script} from "forge-std/src/Script.sol";
+import {Script} from "forge-std/Script.sol";
 import {MyServiceManager} from "../src/MyServiceManager.sol";
 import {IDelegationManager} from "eigenlayer-contracts/src/contracts/interfaces/IDelegationManager.sol";
 import {AVSDirectory} from "eigenlayer-contracts/src/contracts/core/AVSDirectory.sol";
@@ -34,9 +34,9 @@ contract DeployMyServiceManager is Script {
             DELEGATION_MANAGER
         );
 
-        IDelegationManager.operatorDetails
+        IDelegationManager.OperatorDetails
                 memory operatorDetails = IDelegationManager.OperatorDetails({
-                earningsReceiver:operator,
+                __deprecated_earningsReceiver:operator,
                 delegationApprover: address(0),
                 stakerOptOutWindowBlocks:0
             });
@@ -73,7 +73,7 @@ contract DeployMyServiceManager is Script {
                    });
 
         vm.startBroadcast(operator);
-        MyServiceManager.registerOperatorToAVS(operator, operatorSignature);  
+        serviceManager.registerOperatorToAVS(operator, operatorSignature);  
         vm.stopBroadcast();          
     }
 }
